@@ -3634,6 +3634,10 @@ else
   endif
 endif
 
+ifeq ($(TARGET_FORCE_OTA_PACKAGE),true)
+build_ota_package := true
+endif
+
 ifeq ($(build_otatools_package),true)
 OTATOOLS :=  $(HOST_OUT_EXECUTABLES)/minigzip \
   $(HOST_OUT_EXECUTABLES)/aapt2 \
